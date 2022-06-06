@@ -2,10 +2,8 @@ package com.alexpletnyov.dependency_injection_example.example_1
 
 import dagger.Component
 
-@Component
+@Component(modules = [ComputerModule::class])
 interface NewComponent {
-
-	fun getKeyboard(): Keyboard //another way
 
 	fun inject(activity: Activity)
 }
