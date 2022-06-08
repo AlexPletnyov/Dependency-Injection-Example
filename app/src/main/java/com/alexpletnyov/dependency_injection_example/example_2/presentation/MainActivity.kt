@@ -6,6 +6,7 @@ import android.provider.ContactsContract
 import com.alexpletnyov.dependency_injection_example.R
 import com.alexpletnyov.dependency_injection_example.example_1.Activity
 import com.alexpletnyov.dependency_injection_example.example_2.di.ApplicationComponent
+import com.alexpletnyov.dependency_injection_example.example_2.di.ContextModule
 import com.alexpletnyov.dependency_injection_example.example_2.di.DaggerApplicationComponent
 import com.alexpletnyov.dependency_injection_example.example_2.di.DataModule
 import javax.inject.Inject
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
 	private val component by lazy {
 		DaggerApplicationComponent.builder()
-			.dataModule(DataModule(this))
+			.contextModule(ContextModule(application))
 			.build()
 	}
 
