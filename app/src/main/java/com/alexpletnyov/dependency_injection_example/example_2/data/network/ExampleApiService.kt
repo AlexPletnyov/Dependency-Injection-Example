@@ -1,8 +1,9 @@
 package com.alexpletnyov.dependency_injection_example.example_2.data.network
 
 import android.util.Log
+import javax.inject.Inject
 
-class ExampleApiService {
+class ExampleApiService @Inject constructor() {
 
 	fun method() {
 		Log.d(LOG_TAG, "ExampleApiService")

@@ -1,6 +1,8 @@
 package com.alexpletnyov.dependency_injection_example.example_2.data.mapper
 
-class ExampleMapper {
+import javax.inject.Inject
+
+class ExampleMapper @Inject constructor() {
 
 	fun map() {
 

@@ -4,8 +4,9 @@ import com.alexpletnyov.dependency_injection_example.example_2.data.datasource.E
 import com.alexpletnyov.dependency_injection_example.example_2.data.datasource.ExampleRemoteDataSourceImpl
 import com.alexpletnyov.dependency_injection_example.example_2.data.mapper.ExampleMapper
 import com.alexpletnyov.dependency_injection_example.example_2.domain.ExampleRepository
+import javax.inject.Inject
 
-class ExampleRepositoryImpl(
+class ExampleRepositoryImpl @Inject constructor(
 	private val localDataSource: ExampleLocalDataSourceImpl,
 	private val remoteDataSource: ExampleRemoteDataSourceImpl,
 	private val mapper: ExampleMapper

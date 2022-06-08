@@ -1,6 +1,8 @@
 package com.alexpletnyov.dependency_injection_example.example_2.domain
 
-class ExampleUseCase(
+import javax.inject.Inject
+
+class ExampleUseCase @Inject constructor(
 	private val repository: ExampleRepository
 ) {
 
